@@ -1,0 +1,80 @@
+worldList:
+  #以下内容可复制多个
+  world:
+    #开关
+    type: true
+    #权限略过
+    permissions: wp.world
+    #保护画
+    draw: true
+    #保护展示框
+    frameProtection: true
+    #禁止放置盔甲架、末影水晶、船、矿车
+    amrorProtection: true
+    #禁止破坏盔甲架
+    amrorBreak: true
+    #是否保护装备取出或者装入盔甲架
+    amrorClick: true
+    #禁止树叶消失
+    leavesProtection: true
+    #禁止桶倒液体
+    bucketPour: true
+    #禁止桶装液体
+    bucketFill: true
+    #禁止自然生成生物 未完成
+    notEntitySpawn: false
+    #禁止自然方块消失
+    notBlockTick: true
+    #禁止实体爆炸 包含TNT
+    notEntityExplode: true
+    #禁止工具右键
+    notToolToRight: true
+    #禁止修改告示牌
+    notSignEdit: true
+    #破坏方块白名单
+    breakBlockWhite:
+      #true = 黑名单  false = 白名单
+      type: true
+      #方块英文ID需大写
+      block:
+        - GLASS
+    #放置方块
+    placeBlockWhite:
+      #true = 黑名单  false = 白名单
+      type: true
+      #方块英文ID需大写
+      block:
+        - GLASS
+    #交互方块选项
+    blockAllInteract:
+      #true = 黑名单  false = 白名单
+      type: true
+      #提示消息的间隔 单位秒
+      time: 5
+      #方块英文ID需大写
+      block:
+        - GLASS
+    #物品黑名单
+    itemAllInteract:
+      #true = 黑名单  false = 白名单
+      type: true
+      #物品英文ID必须大写
+      item:
+        - GLASS
+    #保护实体
+    entityInteract:
+      #true = 黑名单  false = 白名单
+      type: true
+      #实体英文ID需大写
+      entity:
+        - GLASS
+#无需理会,后续若有双重输出语句的物品,可将大写物品英文id放入这里
+placeBlock:
+  - WATER_BUCKET
+  - BUCKET
+  - PUFFERFISH_BUCKET
+  - MILK_BUCKET
+  - LAVA_BUCKET
+  - SALMON_BUCKET
+  - TROPICAL_FISH_BUCKET
+  - COD_BUCKET
