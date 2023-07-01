@@ -1,0 +1,5 @@
+org\plugin\chantingcat\commands\ReloadCommand.class
+org\plugin\chantingcat\pluginmain\Main.class
+org\plugin\chantingcat\event\worldEvent$1.class
+org\plugin\chantingcat\event\worldEvent.class
+org\plugin\chantingcat\color\Message.class

@@ -31,14 +31,14 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Codes/WorldProtecion&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/文档/GitHub/WorldProtection",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Codes\WorldProtecion" />
@@ -68,6 +68,9 @@
       <option name="presentableId" value="Default" />
       <updated>1688088296334</updated>
       <workItem from="1688088297571" duration="494000" />
+      <workItem from="1688088940461" duration="213000" />
+      <workItem from="1688089681680" duration="65000" />
+      <workItem from="1688254909877" duration="133000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,17 @@
+#颜色代码请使用§或者#FFFF00等  例子为: #FFFFFF世界保护 >>>#FF0000 | §6世界保护 >>>§c
+pluginPrefix: "§6世界保护 >>>§c"
+pluginMessage:
+  notBuilder: "该世界禁止放置"
+  notUse: "该世界禁止交互该方块"
+  notItem: "该世界禁止使用该物品"
+  notBreak: "该世界禁止破坏"
+  notPerm: "你没有权限这么做"
+  notFrame: "禁止交互展示框"
+  notArmor: "禁止放置该物品"
+  notArmorClick: "禁止交互盔甲架"
+  notDamageEntity: "禁止交互该实体"
+  notBucketPour: "禁止用倒桶"
+  notBucketFill: "禁止用装桶"
+  notToolRight: "禁止使用工具右键"
+  notSignEdit: "禁止修改告示牌内容"
+pluginReload: "插件重载成功!"

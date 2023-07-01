@@ -1,7 +1,9 @@
 package org.plugin.chantingcat.event;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.*;
@@ -9,6 +11,7 @@ import org.bukkit.event.entity.*;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
 import org.bukkit.event.hanging.HangingPlaceEvent;
 import org.bukkit.event.player.*;
+import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.plugin.Plugin;
 import org.plugin.chantingcat.color.Message;
@@ -355,11 +358,24 @@ public class worldEvent implements Listener {
 
     //检测生物出生
     @EventHandler
-    public void onEntitySpawnEvent(CreatureSpawnEvent event){
-        if (this.plugin.getConfig().getBoolean("worldList." + event.getEntity().getWorld().getName() + ".type")) {
-            if (this.plugin.getConfig().getBoolean("worldList." + event.getEntity().getWorld().getName() + ".notEntitySpawn")){
-                if (event.getEntity().getType() != PLAYER){
-                    event.getEntity().eject();
+    public void onCreatureSpawnEvent(CreatureSpawnEvent event){
+        if (this.plugin.getConfig().getBoolean("worldList." + event.getEntity().getWorld().getName() + ".type")
+                && this.plugin.getConfig().getBoolean("worldList." + event.getEntity().getName() + ".notEntitySpawn")
+                && event.getEntity().getType() != PLAYER) {
+
+            event.setCancelled(true);
+        }
+    }
+    //检测区块强加载导致的生物生成
+    @EventHandler
+    public void onChunkLoad(ChunkLoadEvent event) {
+        //检查生物生成的世界
+        if (this.plugin.getConfig().getBoolean("worldList." + event.getWorld().getName() + ".type")
+                && this.plugin.getConfig().getBoolean("worldList." + event.getWorld().getName() + ".notEntitySpawn")) {
+            //清除已生成的生物实体
+            for (Entity entity : event.getChunk().getEntities()) {
+                if (entity instanceof LivingEntity) {
+                    entity.remove(); //移除生物实体
                 }
             }
         }
